@@ -1,0 +1,40 @@
+and° penman -Syyn 
+git 
+python-pip
+python-setuptools 
+python-wheel 
+python-pyserial 3 
+gperf 
+git 
+wget 
+curl 
+xz 
+ninja 
+file 
+cmake 
+bison 
+make 
+flex 
+gcc 
+Etc 
+openocd 
+arm-none-eabl-gcc 
+arm-none-eabi-binutils 
+arm-none-eabi-gdb 
+patchelf dfn-aril 
+gcovr 
+Etc 
+python-pytest 
+python-anytree 
+Python-breathe 
+python-intelhex 
+Python-packaging 
+Prrhon-PlY PYthon-Pyaml 
+X 11 
+python- pyelf 
+tools 
+python- pykwa 
+lif y 12 
+python-tabulate 
+ccache 
+doxygen 

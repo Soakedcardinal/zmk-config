@@ -1,0 +1,32 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+// TODO: update default keymap . . .
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                          |  Y   |  U    |  I    |  O   |   P   |   \  |
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |                          |  N   |  M    |  ,    |  .   |   /   | CTRL |
+//               | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+			bindings = <
+	&kp TAB   &kp Q    &kp W    &kp E   &kp R     &kp T                         &kp Y     &kp U   &kp I     &kp O   &kp P    &kp BSLH
+	&kp BSPC  &kp A    &kp S    &kp D   &kp F     &kp G                         &kp H     &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z    &kp X    &kp C   &kp V     &kp B                         &kp N     &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                   &kp LGUI &kp DEL &kp RET   &kp SPACE &kp ESC     &kp RET &kp SPACE &kp TAB &kp BSPC  &kp RALT
+			>;
+		};
+	};
+};
+
+
+    // kp is the "key press" behavior, and takes a single binding argument of the key code from the 'keyboard/keypad" HID usage table.
+
+    // mo is the "momentary layer" behaviour, and takes a single binding argument of the numeric ID of the layer to momentarily enable when that key is held.
+
+    // trans is the "transparent" behavior, useful to be place in higher layers above mo bindings to be sure the key release is handled by the lower layer. No binding arguments are required.
+    
+    // mt is the "mod-tap" behavior, and takes two binding arguments, the modifier to use if held, and the keycode to send if tapped.
