@@ -9,7 +9,8 @@ jobs:
       image: zmkfirmware/zmk-build-arm:2.4
     strategy:
       matrix:
-        board: nrfmicro_11
+        board: 
+          - nrfmicro_11
         shield: 
           - tightyl_left
           - tightyl_right
