@@ -63,36 +63,13 @@
 
             bindings = <
 
-	&none &none &none &none &none &none        		&none &kp HOME &none &kp END &none &none
+	&none &none &none &none &none &none        		&none &kp HOME &kp UP &kp END &none &none
 	&none &none &none &none &none &none      		&none &kp LEFT &kp DOWN &kp RIGHT &none &none
 	&none &none &none &none &none &none             &none &none &none &none &none &none
 	                  &none &none &none &none &none &none &none &none &none &none        
 
             >;
         };
-
-
-
-// [_NAV] =  LAYOUT_ortho_4x12( \
-//   _______, _______, _______, _______, _______, _______, 	_______, KC_HOME,   KC_UP,   KC_END, _______, _______, \
-//   _______, _______, _______, _______, _______, _______,		_______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, \
-//   _______, _______, _______, _______, _______, _______, 	_______, _______, _______,  _______, _______, _______, \
-//   _______, _______, _______, _______, _______, _______, 	_______, _______, _______,  _______, _______, _______ \
-// ),
-
-
-
-
-
-		//  adjust_layer {
-		//    &reset &bootloader  &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &bootloader &reset
-        //   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
-        //   &none        &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &none
-        //                                                             &trans &none &trans   &trans &none &trans
-        //                 >;
-        //         };
-
-
 	};
 };
 
