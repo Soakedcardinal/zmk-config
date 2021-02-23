@@ -14,16 +14,15 @@
 //               | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
 
-	&kp TAB   &kp Q    &kp W    &kp E   &kp R     &kp T                   &kp Y     &kp U    &kp I     &kp O   &kp P    &kp BSLH
-	&kp BSPC  &kp A    &kp S    &kp D   &kp F     &kp G                   &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z    &kp X    &kp C   &kp V     &kp B                   &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-	                   &none    &none   &kp LGUI  &kp RET &kp ESC   &none &kp SPACE &kp RALT &none     &none
-
+	&kp TAB   &kp Q &kp W  &kp E        &kp R     &kp T                 &kp Y     &kp U    &kp I       &kp O   &kp P    &kp 1
+	&kp BSPC  &kp A &kp S  &kp D        &kp F     &kp G                 &kp H     &kp J    &kp K       &kp L   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z &kp X  &kp C        &kp V     &kp B                 &kp N     &kp M    &kp COMMA   &kp DOT &kp FSLH &kp RSHFT
+	            	&reset &bootloader  &kp LGUI  &kp RET &kp ESC &kp 2 &kp SPACE &kp RALT &bootloader &reset
 			>;
 		};
 	};
 };
-
+// rm -rf tightyl_left_nrfmicro_11.uf2 tightyl_right_nrfmicro_11.uf2 && unzip firmware.zip && rm -rf firmware.zip
 
     // kp is the "key press" behavior, and takes a single binding argument of the key code from the 'keyboard/keypad" HID usage table.
 
@@ -31,4 +30,4 @@
 
     // trans is the "transparent" behavior, useful to be place in higher layers above mo bindings to be sure the key release is handled by the lower layer. No binding arguments are required.
     
-    // mt is the "mod-tap" behavior, and takes two binding arguments, the modifier to use if held, and the keycode to send if tapped.
+    // mt is the "mod-tap" behavior, and takes two binding arguments, the modifier to use if held, and the keycode to send if tapped.iarstienhoienhhhhhhhhjluyienh,,,mmmm					jnarstzxcvqwfp	p		ppttvvienhiennnnnhnnnee
