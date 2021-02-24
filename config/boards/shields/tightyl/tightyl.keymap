@@ -16,7 +16,7 @@
 		&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   		   &kp Y    	 &kp U    &kp I     &kp O    &kp P          &kp BSLH
  		&kp BSPC  	   &kp A 	   &kp S    &kp D   &kp F    &kp G             	           &kp H         &kp J    &kp K     &kp L    &lt NAV SEMI   &kp SQT
 		&mt LSHFT LPAR &mt LCTRL Z &kp X    &kp C   &kp V    &kp B                         &kp N         &kp M    &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
-	               			  	   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI &kp ESC   &kp RALT 
+	               			  	   &mo ADJ &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI &kp ESC   &kp RALT 
                         >;
                 };
                 lower_layer {
@@ -24,7 +24,7 @@
 		&kp ESC   &none      &none &none     &none &none        		  &none    &none &kp UNDER &none &none &none
 		&kp DEL   &kp AT     &none &none     &none &kp DLLR      		  &kp HASH &none &none     &none &none &none
 		&kp LBKT  &kp K_UNDO &none &kp CARET &none &kp EXCL               &none    &none &none     &none &none &kp RBKT
-							&none &none      &mo ADJ &none  &trans &trans &none    &none &none     &none
+							&none &none      &none &none  &trans &trans &none    &none &none     &none
                         >;
                 };
                 raise_layer {
@@ -32,7 +32,7 @@
 		&kp TILDE &none    &none &none &none &none        		  &kp KP_MINUS &kp N7   &kp N8 &kp N9  &none     &none
 		&kp BSPC  &kp AMPS &none &none &none &none      		  &kp ASTRK    &kp N4   &kp N5 &kp N6  &kp EQUAL &none
 		&kp LBRC  &none    &none &none &none &none                &kp PLUS     &kp N1   &kp N2 &kp N3  &none     &kp RBRC
-						   &none &none &none &trans &trans &trans &trans       &mo ADJ  &kp N0 &kp DOT          
+						   &none &none &none &trans &trans &trans &trans       &none  &kp N0 &kp DOT          
                         >;
                 };
                 navigation_layer {
