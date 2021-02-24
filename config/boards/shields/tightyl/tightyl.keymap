@@ -1,8 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// #define DEF 0
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -14,7 +12,6 @@
 			&none &none &none &none &none &none             &none &none &none &none &none &none
 			&none &none &none &none &none &none             &none &none &none &none &none &none
 						&none &none &none &none &none &none &none &none &none &none
-
 			>;
 			
 		};
