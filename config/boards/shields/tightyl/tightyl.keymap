@@ -5,7 +5,7 @@
 #define LWR 1
 #define RSE 2
 #define NAV 3
-// #define ADJ 4
+#define ADJ 4
 
 / {
         keymap {
@@ -43,13 +43,13 @@
 					&none &none &none &none &none &none &none &none    &none    &none        
                         >;
                 };
-        //         adjust_layer {
-        //                 bindings = <
-		// &none &none &none 		&none  &none &none        	   &none  &none       &none &none &none &none
-		// &none &none &none 		&none  &none &none      	   &none  &none       &none &none &none &none
-		// &none &none &none	    &none  &none &none             &none  &none       &none &none &none &none
-		// 			&bootloader &reset &none &none &none &none &reset &bootloader &none &none   
-        //                 >;
-        //         };
+                adjust_layer {
+                        bindings = <
+		&none &none &none 		&none  &none &none        	   &none  &none       &none &none &none &none
+		&none &none &none 		&none  &none &none      	   &none  &none       &none &none &none &none
+		&none &none &none	    &none  &none &none             &none  &none       &none &none &none &none
+					&bootloader &reset &none &none &none &none &reset &bootloader &none &none   
+                        >;
+                };
         };
 };
