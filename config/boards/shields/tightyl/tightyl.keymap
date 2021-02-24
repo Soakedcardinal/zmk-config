@@ -13,11 +13,12 @@
 
 		default_layer {bindings = <
 
-	&kp TAB   	   &kp Q       &kp W &kp E    &kp R    &kp T         		 &kp Y   &kp U    	   &kp I     &kp O    &kp P          &kp BSLH
-	&kp BSPC  	   &kp A 	   &kp S &kp D    &kp F    &kp G             	 &kp H 	 &kp J  	   &kp K     &kp L    &lt NAV SEMI   &kp SQT
-	&mt LSHFT LPAR &mt LCTRL Z &kp X &kp C    &kp V    &kp B                 &kp N 	 &kp M 	       &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
-	            			   &none &kp LALT &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI  &kp RALT &none
+	&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   &kp Y   &kp U    	 &kp I     &kp O    &kp P          &kp BSLH
+	&kp BSPC  	   &kp A 	   &kp S    &kp D   &kp F    &kp G             	   &kp H   &kp J  	     &kp K     &kp L    &lt NAV SEMI   &kp SQT
+	&mt LSHFT LPAR &mt LCTRL Z &kp X    &kp C   &kp V    &kp B                 &kp N   &kp M 	     &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
+	            			   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI  &kp ESC  &kp RALT 
 		>;};
+		
 		lower_layer {bindings = <
 
 	&kp ESC   &none  &none &none     &none &none        		  &none    &none  &kp UNDER &none &none &none
