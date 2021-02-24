@@ -24,7 +24,7 @@
 		&kp ESC   &none      &none &none     &none &none        		  &none    &none   &kp UNDER &none &none &none
 		&kp DEL   &kp AT     &none &none     &none &kp DLLR      		  &kp HASH &none   &none     &none &none &none
 		&kp LBKT  &kp K_UNDO &none &kp CARET &none &kp EXCL               &none    &none   &none     &none &none &kp RBKT
-							&none &none     &none &none  &trans &trans &trans   &none &none     &none
+							&none &none     &none &lt ADJ N1  &trans &trans &lt ADJ N1   &none &none     &none
                         >;
                 };
                 raise_layer {
