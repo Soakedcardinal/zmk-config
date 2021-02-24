@@ -10,7 +10,6 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-
 		default_layer {
 			bindings = <
 		&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   		   &kp Y    	 &kp U    &kp I     &kp O    &kp P          &kp BSLH
@@ -20,7 +19,7 @@
 				>;
 		};
 		lower_layer {
-				bindings = <
+			bindings = <
 	&kp ESC   &none      &none &none     &none &none        		  &none    &none   &kp UNDER &none &none &none
 	&kp DEL   &kp AT     &none &none     &none &kp DLLR      		  &kp HASH &none   &none     &none &none &none
 	&kp LBKC  &kp K_UNDO &none &kp CARET &none &kp EXCL               &none    &none   &none     &none &none &kp RBKC
@@ -28,7 +27,7 @@
         		>;
 		};
 		raise_layer {
-				bindings = < 
+			bindings = < 
 	&kp TILDE &none    &none &none &none &none        		  &kp KP_MINUS &kp N7 &kp N8 &kp N9  &none     &none
 	&kp BSPC  &kp AMPS &none &none &none &none      		  &kp ASTRK    &kp N4 &kp N5 &kp N6  &kp EQUAL &none
 	&kp LBRC  &none    &none &none &none &none                &kp PLUS     &kp N1 &kp N2 &kp N3  &none     &kp RBRC
@@ -36,7 +35,7 @@
     			>;
 		};
 		navigation_layer {
-				bindings = <
+			bindings = <
 	&none &none &none &none &none &none        		&none &kp HOME &kp UP   &kp END   &none &none
 	&none &none &none &none &none &none      		&none &kp LEFT &kp DOWN &kp RIGHT &none &none
 	&none &none &none &none &none &none             &none &none    &none    &none     &none &none
