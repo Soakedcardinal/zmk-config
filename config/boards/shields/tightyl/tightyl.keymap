@@ -5,7 +5,7 @@
 #define LWR 1
 #define RSE 2
 #define NAV 3
-// #define ADJ 4
+#define ADJ 4
 
 / {
         keymap {
@@ -16,7 +16,7 @@
 		&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   		   &kp Y    	 &kp U    &kp I     &kp O    &kp P          &kp BSLH
  		&kp BSPC  	   &kp A 	   &kp S    &kp D   &kp F    &kp G             	           &kp H         &kp J    &kp K     &kp L    &lt NAV SEMI   &kp SQT
 		&mt LSHFT LPAR &mt LCTRL Z &kp X    &kp C   &kp V    &kp B                         &kp N         &kp M    &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
-	               			  	   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI &kp ESC   &kp RALT 
+	               			  	   &mo ADJ &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &kp RGUI &kp ESC   &kp RALT 
                         >;
                 };
                 lower_layer {
@@ -43,13 +43,13 @@
 					&none &none &none &none &none &none &none &none    &none    &none        
                         >;
                 };
-        //         adjust_layer {
-        //                 bindings = <
-		// &none &none &none &none &none &none        		&none &none &none &none &none &none
-		// &none &none &none &none &none &none      		&none &none &none &none &none &none
-		// &none &none &none &none &none &none             &none &none &none &none &none &none
-		// 			&bootloader &reset &none &none &none &none &none &none &reset &bootloader        
-        //                 >;
-        //         };
+                adjust_layer {
+                        bindings = <
+		&none &none &none &none &none &none        		&none &none &none &none &none &none
+		&none &none &none &none &none &none      		&none &none &none &none &none &none
+		&none &none &none &none &none &none             &none &none &none &none &none &none
+					&bootloader &reset &none &none &none &none &none &none &reset &bootloader        
+                        >;
+                };
         };
 };
