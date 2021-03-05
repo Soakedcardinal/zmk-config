@@ -18,7 +18,7 @@
 		&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   		   &kp Y    	 &kp U    &kp I     &kp O    &kp P          &kp BSLH
  		&kp BSPC  	   &kp A 	   &kp S    &kp D   &kp F    &kp G             	           &kp H         &kp J    &kp K     &kp L    &lt NAV SEMI   &kp SQT
 		&mt LSHFT LPAR &mt LCTRL Z &kp X    &kp C   &kp V    &kp B                         &kp N         &kp M    &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
-	               			  	   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE & none &kp ESC &none 
+	               			  	   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp SPACE &kp RET &lt RSE SPACE &none &kp ESC &none 
                         >;
                 };
                 lower_layer {bindings = <
