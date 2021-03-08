@@ -7,7 +7,7 @@
 #define RSE 2
 #define NAV 3
 #define ADJ 4
-// #define I3  5
+#define ITHREE  5
 
 / {
         keymap {
@@ -16,7 +16,7 @@
                 default_layer {
                         bindings = <
 		&kp TAB   	   &kp Q       &kp W    &kp E   &kp R    &kp T         		   		 &kp Y    	   &kp U    &kp I     &kp O    &kp P          &kp BSLH
- 		&kp BSPC  	   &lt I3 A	   &kp S    &kp D   &kp F    &kp G             	         &kp H         &kp J    &kp K     &kp L    &lt NAV SEMI   &kp SQT
+ 		&kp BSPC  	   &lt ITHREE A	   &kp S    &kp D   &kp F    &kp G             	         &kp H         &kp J    &kp K     &kp L    &lt NAV SEMI   &kp SQT
 		&mt LSHFT LPAR &mt LCTRL Z &kp X    &kp C   &kp V    &kp B                       &kp N         &kp M    &kp COMMA &kp DOT  &mt RCTRL FSLH &mt RSHFT RPAR
 	               			  	   &kp LALT &kp ESC &kp LGUI &lt LWR RET &kp ESC &kp RET &lt RSE SPACE &none 	&kp ESC   &none 
                         >;
