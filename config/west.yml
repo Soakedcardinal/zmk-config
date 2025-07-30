@@ -5,7 +5,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: zmk-keyboard-tightyl
-      url-base: https://github.com/Soakedcardinal/zmk-keyboard-tightyl
+      url-base: https://github.com/Soakedcardinal
   projects:
     - name: zmk
       remote: zmkfirmware
