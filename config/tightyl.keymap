@@ -11,8 +11,6 @@
 #define GAME  5
 #define FKY  6
 
-// each layer needs to have atleast one regular key code (can't be all &none or &trans)
-
 / {
     keymap {
         compatible = "zmk,keymap";
