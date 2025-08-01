@@ -4,14 +4,30 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define QWT 0
-#define MAK 1
-#define LWR 2
-#define RSE 3
-#define NAV 4
-#define ADJ 5
-#define GAME 6
-#define FKY 7
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define NAV 3
+#define ADJ 4
+#define GAME 5
+#define FKY 6
+
+// #define MAK 1
+// #define LWR 2
+// #define RSE 3
+// #define NAV 4
+// #define ADJ 5
+// #define GAME 6
+// #define FKY 7
+
+//         colemak_layer {
+// 			bindings = <
+// &kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI          &kp BSLH
+// &kp BSPC       &lt A    &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O   &kp SQT
+// &mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp K        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
+//                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+//             >;
+//         };
 
 // https://keymap-drawer.streamlit.app/
 / {
@@ -25,7 +41,7 @@
     };
     keymap {
         compatible = "zmk,keymap";
-        qwerty_layer {
+        default_layer {
 			bindings = <
 &kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
 &kp CAPSLOCK   &lt A        &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
@@ -33,14 +49,7 @@
                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(O) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
         };
-        colemak_layer {
-			bindings = <
-&kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI          &kp BSLH
-&kp BSPC       &lt A    &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O   &kp SQT
-&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp K        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
-                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
-            >;
-        };
+
         lower_layer {
 			bindings = <
 &kp TILDE      &trans       &trans            &trans           &kp PRCNT &trans                          	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
