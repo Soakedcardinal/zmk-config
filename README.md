@@ -1,5 +1,7 @@
 # zmk-config
 
+See [https://github.com/Soakedcardinal/zmk-ws](zmk-ws) for usage instructions
+
 ## Keymap
 
 ![Keymap](keymap.png "Keymap Visualization")
