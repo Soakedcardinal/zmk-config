@@ -14,63 +14,71 @@
 
 // https://keymap-drawer.streamlit.app/
 / {
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&sys_reset>, <&bootloader>;
+            tapping-term-ms = <200>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                         	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
-&kp BSPC       &lt NAV A    &kp S             &kp D            &kp F     &kp G                         	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
-&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                         	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
-                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z)   &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
+&kp BSPC       &lt NAV A    &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
+&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
+                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
         };
         lower_layer {
 			bindings = <
-&kp TILDE      &trans       &trans            &trans           &kp PRCNT &trans                        	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
-&kp DEL        &kp AT       &trans            &trans           &trans    &kp DLLR                      	                       &kp HASH     &trans       &trans       &trans       &trans         &trans
-&kp LBKT       &trans    &trans            &kp CARET        &trans    &kp EXCL                      	                       &trans       &trans       &trans       &trans       &trans         &kp RBKT
-                            &kp LT            &kp GT           &mo ADJ   &none       &none     &none   	&none         &none    &mo ADJ      &none
+&kp TILDE      &trans       &trans            &trans           &kp PRCNT &trans                          	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
+&kp DEL        &kp AT       &trans            &trans           &trans    &kp DLLR                        	                       &kp HASH     &trans       &trans       &trans       &trans         &trans
+&kp LBKT       &trans       &trans            &kp CARET        &trans    &kp EXCL                        	                       &trans       &trans       &trans       &trans       &trans         &kp RBKT
+                            &kp LT            &kp GT           &mo ADJ   &none       &none     &none     	&none         &none    &mo ADJ      &none
             >;
         };
         raise_layer {
 			bindings = <
-&none          &none        &none             &none            &none     &none                         	                       &kp KP_MINUS &kp N7       &kp N8       &kp N9       &none          &none
-&kp BSPC       &kp AMPS     &none             &none            &none     &none                         	                       &kp ASTRK    &kp N4       &kp N5       &kp N6       &kp EQUAL      &none
-&kp LBRC       &none        &none             &none            &none     &none                         	                       &kp PLUS     &kp N1       &kp N2       &kp N3       &none          &kp RBRC
-                            &none             &none            &none     &mo ADJ     &none     &mo FKY 	&none         &mo ADJ  &kp N0       &kp DOT
+&none          &none        &none             &none            &none     &none                           	                       &kp KP_MINUS &kp N7       &kp N8       &kp N9       &none          &none
+&kp BSPC       &kp AMPS     &none             &none            &none     &none                           	                       &kp ASTRK    &kp N4       &kp N5       &kp N6       &kp EQUAL      &none
+&kp LBRC       &none        &none             &none            &none     &none                           	                       &kp PLUS     &kp N1       &kp N2       &kp N3       &none          &kp RBRC
+                            &none             &none            &none     &mo ADJ     &none     &mo FKY   	&none         &mo ADJ  &kp N0       &kp DOT
             >;
         };
         navigation_layer {
 			bindings = <
-&trans         &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                     	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
-&trans         &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                     	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
-&trans         &trans       &trans            &trans           &trans    &trans                        	                       &trans       &trans       &trans       &trans       &trans         &trans
-                            &trans            &trans           &trans    &trans      &trans    &trans  	&trans        &trans   &trans       &trans
+&trans         &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                       	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
+&trans         &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                       	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &trans       &trans       &trans       &trans       &trans         &trans
+                            &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
             >;
         };
         adjust_layer {
 			bindings = <
-&td_reset_boot &kp N1       &none             &none            &none     &none                         	                       &none        &none        &none        &none        &none          &td_reset_boot
-&bt BT_CLR_ALL &bt BT_CLR   &none             &none            &none     &none                         	                       &none        &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
-&studio_unlock &out OUT_USB &out OUT_BLE      &none            &none     &none                         	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
-                            &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none   	&none         &none    &bt BT_SEL 0 &none
+&td0           &kp N1       &none             &none            &none     &none                           	                       &none        &none        &none        &none        &none          &td0
+&bt BT_CLR_ALL &bt BT_CLR   &none             &none            &none     &none                           	                       &none        &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
+&studio_unlock &out OUT_USB &out OUT_BLE      &none            &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
+                            &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none     	&none         &none    &bt BT_SEL 0 &none
             >;
 		};
 		// no funky layer business on left hand. Right hand layers are kept to allow typing special characters
 		gaming_layer {
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                         	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
-&kp BSPC       &kp A        &kp S             &kp D            &kp F     &kp G                         	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
-&kp LSHFT      &kp Z        &kp X             &kp C            &kp V     &kp B                         	                       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH       &mt RSHFT RPAR
-                            &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &trans  	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
+&kp BSPC       &kp A        &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
+&kp LSHFT      &kp Z        &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH       &mt RSHFT RPAR
+                            &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &trans    	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
 		};
 		fkey_layer {
 			bindings = <
-&trans         &trans       &trans            &trans           &trans    &trans                        	                       &none        &kp F7       &kp F8       &kp F9       &kp F10        &kp F11
-&trans         &trans       &trans            &trans           &trans    &trans                        	                       &none        &kp F4       &kp F5       &kp F6       &kp F12        &none
-&trans         &trans       &trans            &trans           &trans    &trans                        	                       &none        &kp F1       &kp F2       &kp F3       &none          &none
-                            &trans            &trans           &trans    &trans      &trans    &trans  	&trans        &trans   &trans       &trans
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &none        &kp F7       &kp F8       &kp F9       &kp F10        &kp F11
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &none        &kp F4       &kp F5       &kp F6       &kp F12        &none
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &none        &kp F1       &kp F2       &kp F3       &none          &none
+                            &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
             >;
 		};
 
@@ -80,15 +88,6 @@
 
         extra2 {
             status = "reserved";
-        };
-    };
-    behaviors {
-        td_reset_boot {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_RESET_BOOT";
-            #binding-cells = <0>;
-            bindings = <&sys_reset>, <&bootloader>;
-            tapping-term-ms = <200>;
         };
     };
 };
