@@ -4,13 +4,14 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define NAV 3
-#define ADJ 4
-#define GAME  5
-#define FKY  6
+#define QWT 0
+#define MAK 1
+#define LWR 2
+#define RSE 3
+#define NAV 4
+#define ADJ 5
+#define GAME 6
+#define FKY 7
 
 // https://keymap-drawer.streamlit.app/
 / {
@@ -24,10 +25,18 @@
     };
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        qwerty_layer {
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI       &kp BSLH
-&kp BSPC       &kp A        &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O      &kp SQT
+&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
+&kp CAPSLOCK   &lt A        &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
+&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
+                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(O) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+            >;
+        };
+        colemak_layer {
+			bindings = <
+&kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI          &kp BSLH
+&kp BSPC       &lt A    &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O   &kp SQT
 &mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp K        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
@@ -50,17 +59,17 @@
         };
         navigation_layer {
 			bindings = <
-&trans         &trans       &trans            &trans           &trans    &trans                          	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
-&trans         &trans       &trans            &trans           &trans    &trans                          	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
+&trans         &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                       	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
+&trans         &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                       	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
 &trans         &trans       &trans            &trans           &trans    &trans                          	                       &trans       &trans       &trans       &trans       &trans         &trans
                             &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
             >;
         };
         adjust_layer {
 			bindings = <
-&td0           &kp N1       &none             &none            &none     &none                           	                       &none        &none        &none        &none        &none          &td0
+&td0           &tog QWT             &none            &none     &none &kp N1                          	                       &none        &none        &none        &none        &none          &td0
 &bt BT_CLR_ALL &bt BT_CLR   &none             &none            &none     &none                           	                       &none        &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
-&studio_unlock &out OUT_USB &out OUT_BLE      &none            &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
+&studio_unlock &out OUT_USB &out OUT_BLE      &tog MAK            &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
                             &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none     	&none         &none    &bt BT_SEL 0 &none
             >;
 		};
@@ -81,7 +90,7 @@
                             &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
             >;
 		};
-
+        
         extra1 {
             status = "reserved";
         };
