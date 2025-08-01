@@ -12,24 +12,6 @@
 #define GAME 5
 #define FKY 6
 
-// #define MAK 1
-// #define LWR 2
-// #define RSE 3
-// #define NAV 4
-// #define ADJ 5
-// #define GAME 6
-// #define FKY 7
-
-//         colemak_layer {
-// 			bindings = <
-// &kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI          &kp BSLH
-// &kp BSPC       &lt A    &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O   &kp SQT
-// &mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp K        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
-//                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
-//             >;
-//         };
-
-// https://keymap-drawer.streamlit.app/
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -76,9 +58,9 @@
         };
         adjust_layer {
 			bindings = <
-&td0           &none     &none             &none            &none     &kp N1                          	                       &none        &none        &none        &none        &none          &td0
+&td0           &none        &none             &none            &none     &kp N1                          	                       &none        &none        &none        &none        &none          &td0
 &bt BT_CLR_ALL &bt BT_CLR   &none             &none            &none     &none                           	                       &none        &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
-&studio_unlock &out OUT_USB &out OUT_BLE      &none         &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
+&studio_unlock &out OUT_USB &out OUT_BLE      &none            &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
                             &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none     	&none         &none    &bt BT_SEL 0 &none
             >;
 		};
