@@ -1,1 +1,1 @@
-layout: {dts_layout: zmk-keyboard-tightyl/boards/shields/tightyl/tightyl-layouts.dtsi}
+dts_layout: "zmk-keyboard-tightyl/boards/shields/tightyl/tightyl-layouts.dtsi"
