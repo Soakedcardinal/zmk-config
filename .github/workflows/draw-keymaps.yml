@@ -6,8 +6,7 @@ on:
       - "config/*.keymap"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
-      # - 'boards/*/*/*.keymap'
-      - "zmk-keyboard-tightyl/boards/shields/tightyl/*.dtsi
+      - "zmk-keyboard-tightyl/boards/shields/tightyl/*.dtsi"
 
 jobs:
   draw:
