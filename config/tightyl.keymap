@@ -21,14 +21,14 @@
 &kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                         	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
 &kp BSPC       &lt NAV A    &kp S             &kp D            &kp F     &kp G                         	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
 &mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                         	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
-                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp C_Z   &kp C_Y 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+                            &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z)   &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
         };
         lower_layer {
 			bindings = <
 &kp TILDE      &trans       &trans            &trans           &kp PRCNT &trans                        	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
 &kp DEL        &kp AT       &trans            &trans           &trans    &kp DLLR                      	                       &kp HASH     &trans       &trans       &trans       &trans         &trans
-&kp LBKT       &kp LC(Z)    &trans            &kp CARET        &trans    &kp EXCL                      	                       &trans       &trans       &trans       &trans       &trans         &kp RBKT
+&kp LBKT       &trans    &trans            &kp CARET        &trans    &kp EXCL                      	                       &trans       &trans       &trans       &trans       &trans         &kp RBKT
                             &kp LT            &kp GT           &mo ADJ   &none       &none     &none   	&none         &none    &mo ADJ      &none
             >;
         };
@@ -62,7 +62,7 @@
 &kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                         	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
 &kp BSPC       &kp A        &kp S             &kp D            &kp F     &kp G                         	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
 &kp LSHFT      &kp Z        &kp X             &kp C            &kp V     &kp B                         	                       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH       &mt RSHFT RPAR
-                            &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &mo LWR 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+                            &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &trans  	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
 		};
 		fkey_layer {
