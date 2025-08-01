@@ -26,9 +26,9 @@
         compatible = "zmk,keymap";
         default_layer {
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
-&kp BSPC       &lt NAV A    &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
-&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
+&kp TAB        &kp Q        &kp W             &kp F            &kp P     &kp G                           	                       &kp J        &kp L        &kp U        &kp Y        &kp SEMI       &kp BSLH
+&kp BSPC       &kp A        &kp R             &kp S            &kp T     &kp D                           	                       &kp H        &kp N        &kp E        &kp I        &lt NAV O      &kp SQT
+&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp K        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(Y) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
         };
@@ -50,8 +50,8 @@
         };
         navigation_layer {
 			bindings = <
-&trans         &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                       	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
-&trans         &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                       	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
+&trans         &trans       &trans            &trans           &trans    &trans                          	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
 &trans         &trans       &trans            &trans           &trans    &trans                          	                       &trans       &trans       &trans       &trans       &trans         &trans
                             &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
             >;
