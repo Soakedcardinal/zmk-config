@@ -12,6 +12,11 @@
 #define GAME 5
 #define FKY 6
 
+// to get into bootloader:
+//   - left hand: hold top two thumb keys for (ADJ) (or RSE+LWR) then double tap top left corner
+//   - right hand: hold top two thumb keys for (ADJ) (or RSE+LWR) then double tap top right corner
+
+
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -20,71 +25,89 @@
             bindings = <&sys_reset>, <&bootloader>;
             tapping-term-ms = <200>;
         };
+        grave_tap_dance: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GRAVE_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp GRAVE>, <&code_block_macro>;
+        };
+    };
+    macros {
+        code_block_macro: code_block_macro {
+            compatible = "zmk,behavior-macro";
+            label = "CODE_BLOCK_MACRO";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
+                , <&macro_tap &kp ENTER>
+                , <&macro_tap &kp ENTER>
+                , <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
+                , <&macro_tap &kp UP>
+                ;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
-&kp BSPC       &kp A        &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
-&mt LSHFT LPAR &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
-                            &kp LALT          &kp ESC           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(O) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+&kp TAB          &kp Q        &kp W             &kp E            &kp R     &kp T                           	&kp Y         &kp U        &kp I        &kp O        &kp P          &kp BSLH
+&kp BSPC         &kp A        &kp S             &kp D            &kp F     &kp G                           	&kp H         &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
+&mt LSHFT LPAR   &mt LCTRL Z  &kp X             &kp C            &kp V     &kp B                           	&kp N         &kp M        &kp COMMA    &kp DOT      &mt RCTRL FSLH &mt RSHFT RPAR
+                              &kp LALT          &kp ESC          &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(O) 	&lt RSE SPACE &kp RGUI     &kp N0       &tog GAME
             >;
         };
         lower_layer {
 			bindings = <
-&kp GRAVE      &trans       &trans            &trans           &kp PRCNT &trans                          	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
-&kp DEL        &kp AT       &trans            &trans           &trans    &kp DLLR                        	                       &kp HASH     &trans       &trans       &trans       &trans         &trans
-&mt LSHFT LBKT &trans       &trans            &kp CARET        &trans    &kp EXCL                        	                       &trans       &trans       &trans       &trans       &trans         &mt RSHFT RBKT
-                            &kp LT            &kp GT           &mo ADJ   &none       &trans    &trans    	&none         &mo ADJ  &trans       &trans
+&grave_tap_dance &trans       &trans            &trans           &kp PRCNT &trans                          	&trans        &trans       &kp UNDER    &trans       &trans         &trans
+&kp DEL          &kp AT       &trans            &trans           &trans    &kp DLLR                        	&kp HASH      &trans       &trans       &trans       &trans         &trans
+&mt LSHFT LBKT   &trans       &trans            &kp CARET        &trans    &kp EXCL                        	&trans        &trans       &trans       &trans       &trans         &mt RSHFT RBKT
+                              &kp LT            &kp GT           &mo ADJ   &none       &trans    &trans    	&none         &mo ADJ      &trans       &trans
             >;
         };
         raise_layer {
 			bindings = <
-&trans         &kp N1       &kp N2            &kp N3           &kp N4    &kp N5                          	                       &kp KP_MINUS &kp N7       &kp N8       &kp N9       &trans         &trans
-&kp BSPC       &kp AMPS     &trans            &trans           &trans    &trans                          	                       &kp ASTRK    &kp N4       &kp N5       &kp N6       &kp EQUAL      &trans
-&mt LSHFT LBRC &trans       &trans            &trans           &trans    &trans                          	                       &kp PLUS     &kp N1       &kp N2       &kp N3       &trans         &mt RSHFT RBRC
-                            &trans            &trans           &trans    &mo ADJ     &trans    &mo FKY   	&trans        &mo ADJ  &kp N0       &kp DOT
+&trans           &kp N1       &kp N2            &kp N3           &kp N4    &kp N5                          	&kp KP_MINUS  &kp N7       &kp N8       &kp N9       &trans         &trans
+&kp BSPC         &kp AMPS     &trans            &trans           &trans    &trans                          	&kp ASTRK     &kp N4       &kp N5       &kp N6       &kp EQUAL      &trans
+&mt LSHFT LBRC   &trans       &trans            &trans           &trans    &trans                          	&kp PLUS      &kp N1       &kp N2       &kp N3       &trans         &mt RSHFT RBRC
+                              &trans            &trans           &trans    &mo ADJ     &trans    &mo FKY   	&trans        &mo ADJ      &kp N0       &kp DOT
             >;
         };
         navigation_layer {
 			bindings = <
-&trans         &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                       	                       &kp PG_UP    &kp HOME     &kp UP       &kp END      &trans         &trans
-&trans         &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                       	                       &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
-&trans         &trans       &trans            &trans           &trans    &trans                          	                       &trans       &trans       &trans       &trans       &trans         &trans
-                            &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans   &trans       &trans
+&trans           &trans       &kp HOME          &kp UP           &kp END   &kp PG_UP                       	&kp PG_UP     &kp HOME     &kp UP       &kp END      &trans         &trans
+&trans           &trans       &kp LEFT          &kp DOWN         &kp RIGHT &kp PG_DN                       	&kp PG_DN     &kp LEFT     &kp DOWN     &kp RIGHT    &none          &trans
+&trans           &trans       &trans            &trans           &trans    &trans                          	&trans        &trans       &trans       &trans       &trans         &trans
+                              &trans            &trans           &trans    &trans      &trans    &trans    	&trans        &trans       &trans       &trans
             >;
         };
         adjust_layer {
 			bindings = <
-&td0           &none        &none             &none            &none     &kp N1                          	                       &none        &none        &none        &none        &none          &td0
-&bt BT_CLR_ALL &bt BT_CLR   &none             &none            &none     &none                           	                       &none        &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
-&studio_unlock &out OUT_USB &out OUT_BLE      &none            &none     &none                           	                       &none        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
-                            &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none     	&none         &none    &bt BT_SEL 0 &none
+&td0             &none        &none             &none            &none     &kp N1                          	&none         &none        &none        &none        &none          &td0
+&bt BT_CLR_ALL   &bt BT_CLR   &none             &none            &none     &none                           	&none         &bt BT_SEL 4 &bt BT_SEL 5 &none        &none          &none
+&studio_unlock   &out OUT_USB &out OUT_BLE      &none            &none     &none                           	&none         &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &none
+                              &ext_power EP_OFF &ext_power EP_ON &none     &none       &none     &none     	&none         &none        &bt BT_SEL 0 &none
             >;
 		};
-		// no funky layer business on left hand that messes up movement. Right hand layers are kept to allow typing special characters
-		gaming_layer {
+		gaming_layer {		// no funky layer business on left hand that messes up movement. Right hand layers are kept to allow typing special characters
 			bindings = <
-&kp TAB        &kp Q        &kp W             &kp E            &kp R     &kp T                           	                       &kp Y        &kp U        &kp I        &kp O        &kp P          &kp BSLH
-&kp BSPC       &kp A        &kp S             &kp D            &kp F     &kp G                           	                       &kp H        &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
-&kp LSHFT      &kp Z        &kp X             &kp C            &kp V     &kp B                           	                       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH       &mt RSHFT RPAR
-                            &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &trans    	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
+&kp TAB          &kp Q        &kp W             &kp E            &kp R     &kp T                           	&kp Y         &kp U        &kp I        &kp O        &kp P          &kp BSLH
+&kp BSPC         &kp A        &kp S             &kp D            &kp F     &kp G                           	&kp H         &kp J        &kp K        &kp L        &lt NAV SEMI   &kp SQT
+&kp LSHFT        &kp Z        &kp X             &kp C            &kp V     &kp B                           	&kp N         &kp M        &kp COMMA    &kp DOT      &kp FSLH       &mt RSHFT RPAR
+                              &kp LALT          &kp ESC          &kp LGUI  &kp RET     &kp SPACE &trans    	&lt RSE SPACE &kp RGUI     &kp N0       &tog GAME
             >;
 		};
 		fkey_layer {
 			bindings = <
-&none          &none        &none             &none            &none     &none                           	                       &none        &kp F7       &kp F8       &kp F9       &kp F10        &kp F11
-&none          &none        &none             &none            &none     &none                           	                       &none        &kp F4       &kp F5       &kp F6       &kp F12        &none
-&none          &none        &none             &none            &none     &none                           	                       &none        &kp F1       &kp F2       &kp F3       &none          &none
-                            &none             &none            &none     &none       &none     &none     	&none         &none    &none        &none
+&none            &none        &none             &none            &none     &none                           	&none         &kp F7       &kp F8       &kp F9       &kp F10        &kp F11
+&none            &none        &none             &none            &none     &none                           	&none         &kp F4       &kp F5       &kp F6       &kp F12        &none
+&none            &none        &none             &none            &none     &none                           	&none         &kp F1       &kp F2       &kp F3       &none          &none
+                              &none             &none            &none     &none       &none     &none     	&none         &none        &none        &none
             >;
 		};
-
         extra1 {
             status = "reserved";
         };
-
         extra2 {
             status = "reserved";
         };
