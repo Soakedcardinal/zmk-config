@@ -31,20 +31,19 @@
                             &kp LALT          &gresc           &kp LGUI  &lt LWR RET &kp LC(Z) &kp LC(O) 	&lt RSE SPACE &kp RGUI &kp N0       &tog GAME
             >;
         };
-
         lower_layer {
 			bindings = <
 &kp TILDE      &trans       &trans            &trans           &kp PRCNT &trans                          	                       &trans       &trans       &kp UNDER    &trans       &trans         &trans
 &kp DEL        &kp AT       &trans            &trans           &trans    &kp DLLR                        	                       &kp HASH     &trans       &trans       &trans       &trans         &trans
-&kp LBKT       &trans       &trans            &kp CARET        &trans    &kp EXCL                        	                       &trans       &trans       &trans       &trans       &trans         &kp RBKT
+&mt LSHFT LBKT &trans       &trans            &kp CARET        &trans    &kp EXCL                        	                       &trans       &trans       &trans       &trans       &trans         &mt RSHFT RBKT
                             &kp LT            &kp GT           &mo ADJ   &none       &trans    &trans    	&none         &mo ADJ  &trans       &trans
             >;
         };
         raise_layer {
 			bindings = <
-&trans         &trans       &trans            &trans           &trans    &trans                          	                       &kp KP_MINUS &kp N7       &kp N8       &kp N9       &trans         &trans
+&trans         &kp N1       &kp N2            &kp N3           &kp N4    &kp N5                          	                       &kp KP_MINUS &kp N7       &kp N8       &kp N9       &trans         &trans
 &kp BSPC       &kp AMPS     &trans            &trans           &trans    &trans                          	                       &kp ASTRK    &kp N4       &kp N5       &kp N6       &kp EQUAL      &trans
-&kp LBRC       &trans       &trans            &trans           &trans    &trans                          	                       &kp PLUS     &kp N1       &kp N2       &kp N3       &trans         &kp RBRC
+&mt LSHFT LBRC &trans       &trans            &trans           &trans    &trans                          	                       &kp PLUS     &kp N1       &kp N2       &kp N3       &trans         &mt RSHFT RBRC
                             &trans            &trans           &trans    &mo ADJ     &trans    &mo FKY   	&trans        &mo ADJ  &kp N0       &kp DOT
             >;
         };
